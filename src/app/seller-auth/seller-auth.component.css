@@ -1,0 +1,21 @@
+.seller_form_container{
+    text-align: center;
+}
+.seller_form_header{
+    color: #f67280;
+}
+.input_field{
+    padding: 5px;
+}
+.seller_form{
+    margin-bottom: 20px;
+}
+.seller_form_container{
+    margin-top: 10%;
+}
+.seller_btn{
+    padding: 7px;
+    color: white;
+    background: #f67280;
+    border: 1px solid #f67280;
+}

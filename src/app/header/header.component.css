@@ -1,0 +1,34 @@
+.nav_btns_cont{
+    display: flex;
+    /* margin-left: 40%; */
+    line-height: 30px;
+}
+.search_btn{
+    padding: 7px;
+    color: white;
+    background: #f67280;
+    border: 1px solid #f67280;
+}
+.nav_btns_text{
+    text-decoration: none;
+}
+.header_text{
+    color: #f67280; 
+}
+.search_input{
+    padding: 7px;
+    border: 1px solid #f67280;
+    width: 90%;
+}
+.nav_btns{
+    list-style: none;
+    margin-right: 10px;
+}
+.nav{
+    display: flex;
+}
+.search_conatainer{
+    margin-left: 30px;
+    line-height: 60px;
+    width: 60%;
+}
