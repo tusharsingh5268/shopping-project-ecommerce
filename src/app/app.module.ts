@@ -8,21 +8,27 @@ import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
-
+import { SellerService } from './services/seller.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Environment } from './environment/enviroment';
+import { ServiceEndPoints } from './service-endpoints/service-endpoints';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    SellerHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SellerService,Environment,ServiceEndPoints],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
