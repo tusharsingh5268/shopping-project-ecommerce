@@ -1,5 +1,5 @@
 <div class="seller_form_container">
-    <h1 class="seller_form_header">Seller Sign Up Form</h1>
+    <h1 class="seller_form_header">{{sellerFormHeader}}</h1>
     <form #sellerForm="ngForm">
         <div class="seller_form">
             <input type="email" class="input_field" #email="ngModel" name="selleremail" email placeholder="Email" required [(ngModel)]="selleremail">
@@ -8,8 +8,9 @@
             <input type="password" class="input_field" name="password" placeholder="Password" required [(ngModel)]="password">
         </div>
         <div>
-            <button [disabled]="sellerForm.invalid" class="seller_btn" (click)="sellerSubmit(sellerForm)">Sign Up</button>
+            <button *ngIf="isSignUp" [disabled]="sellerForm.invalid" class="seller_btn" (click)="sellerSubmit(sellerForm)">Sign Up</button>
+            <button *ngIf="!isSignUp" [disabled]="sellerForm.invalid" class="seller_btn" (click)="sellerLoginSubmit(sellerForm)">Login</button>
         </div>
     </form>
-   
+    <div class="login_btn" (click)="loginBtnClick()">{{loginOrSignupText}}</div>
 </div>

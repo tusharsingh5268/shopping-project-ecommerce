@@ -19,3 +19,9 @@
     background: #f67280;
     border: 1px solid #f67280;
 }
+.login_btn{
+    cursor: pointer;
+    color: #f67280;
+    display: inline-block;
+    margin-top: 10px;
+}
