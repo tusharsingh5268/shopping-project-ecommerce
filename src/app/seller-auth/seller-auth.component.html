@@ -1,6 +1,8 @@
 <div class="seller_form_container">
     <h1 class="seller_form_header">{{sellerFormHeader}}</h1>
     <form #sellerForm="ngForm">
+        <div *ngIf="isLoginFail" class="authError">{{authFailText}}</div>
+
         <div class="seller_form">
             <input type="email" class="input_field" #email="ngModel" name="selleremail" email placeholder="Email" required [(ngModel)]="selleremail">
         </div>

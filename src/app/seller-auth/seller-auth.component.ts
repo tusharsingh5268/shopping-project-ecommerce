@@ -12,6 +12,8 @@ export class SellerAuthComponent implements OnInit {
   selleremail:string="";
   password:string="";
   isSignUp:boolean=true;
+  authFailText:string="Email or Password is incorrect"
+  isLoginFail:boolean=false;
   sellerFormHeader="Seller Sign Up Form";
   loginOrSignupText="Already have Account? Click to Login";
  
@@ -30,7 +32,22 @@ export class SellerAuthComponent implements OnInit {
     console.log('selleremail',this.selleremail,this.password,signForm)
   }
   sellerLoginSubmit(signForm:any){
+    this.isLoginFail=false;
     console.log(signForm.form.value,'signForm.form.value')
+    this.seller.sellerLogin(signForm.form.value).subscribe((res:any)=>{
+      if(res && res[0]){
+        console.log()
+        localStorage.setItem('seller',res[0])
+        this.router.navigate(["/sellerhome"])
+        console.log('res',res)
+        this.isLoginFail=false;
+      }else{
+        this.isLoginFail=true;
+        setTimeout(()=>{
+          this.isLoginFail=false;
+        },3000)
+      }
+    })
   }
   loginBtnClick(){
     this.selleremail="";

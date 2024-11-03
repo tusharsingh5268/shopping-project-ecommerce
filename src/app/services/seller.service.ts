@@ -21,4 +21,9 @@ export class SellerService {
     console.log('Seller',sellerData,url)
     return this.http.post(url,sellerData)
   }
+  sellerLogin(sellerData:SellerDataType){
+    const url=this.environment.baseUrl + this.serviceEndpoints.createSeller;
+    console.log('login',sellerData,url)
+    return this.http.get(`${url}?email=${sellerData.selleremail}&password=${sellerData.password}`)
+  }
 }

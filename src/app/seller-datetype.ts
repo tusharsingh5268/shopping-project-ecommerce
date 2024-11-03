@@ -1,5 +1,5 @@
 export interface SellerDataType{
-    email:string,
+    selleremail:string,
     password:string
 
 }

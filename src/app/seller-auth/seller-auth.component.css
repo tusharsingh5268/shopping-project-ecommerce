@@ -2,7 +2,7 @@
     text-align: center;
 }
 .seller_form_header{
-    color: #f67280;
+    color: purple;
 }
 .input_field{
     padding: 5px;
@@ -16,12 +16,18 @@
 .seller_btn{
     padding: 7px;
     color: white;
-    background: #f67280;
-    border: 1px solid #f67280;
+    background: purple;
+    border: 1px solid purple;
 }
 .login_btn{
     cursor: pointer;
-    color: #f67280;
+    color: purple;
     display: inline-block;
     margin-top: 10px;
+    width: 250px;
+    font-size: 12px;
+}
+.authError{
+    color: red;
+    margin-bottom: 15px;
 }
