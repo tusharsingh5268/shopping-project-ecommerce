@@ -1,3 +1,4 @@
 export class ServiceEndPoints{
-    createSeller="/seller"
+    createSeller="/seller";
+    addProduct="/products";
 }

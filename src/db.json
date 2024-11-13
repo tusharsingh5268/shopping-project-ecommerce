@@ -14,6 +14,31 @@
       "id": "2e5c",
       "selleremail": "sam@gmail.com",
       "password": "sam123"
+    },
+    {
+      "id": "e379",
+      "selleremail": "chetan@gmail.com",
+      "password": "chetan123"
+    }
+  ],
+  "products": [
+    {
+      "id": "cc3f",
+      "productName": "Samsung Galaxy S23",
+      "productPrice": "100000",
+      "productColor": "Grey",
+      "productCategory": "Mobile",
+      "productDescription": "Good Mobile",
+      "productImage": "https://m.media-amazon.com/images/I/51VfGGh7quL.jpg"
+    },
+    {
+      "id": "e259",
+      "productName": "I phone",
+      "productPrice": "100000",
+      "productColor": "Black",
+      "productCategory": "Mobile",
+      "productDescription": "Good",
+      "productImage": "https://m.media-amazon.com/images/I/51VfGGh7quL.jpg"
     }
   ]
 }

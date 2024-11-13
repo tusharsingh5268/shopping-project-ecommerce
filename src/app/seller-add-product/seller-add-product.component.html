@@ -1,1 +1,27 @@
-<p>seller-add-product works!</p>
+<div class="seller_add_product_conatiner">
+    <h1 class="add_product_header">Add New Product</h1>
+    <p *ngIf="showSuccess || showError" [ngClass]="'showSuccess'?'showSuccessMsg':'showErrorMsg'">{{message}}</p>
+    <form #addProduct="ngForm">
+        <div class="product_field">
+            <input type="text" class="input_field" name="productName" placeholder="Enter Product Name" ngModel>
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productPrice" placeholder="Enter Product Price" ngModel>
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productColor" placeholder="Enter Product Color" ngModel>
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productCategory" placeholder="Enter Product Category" ngModel>
+        </div>
+        <div class="product_field">
+            <textarea class="input_field" name="productDescription" placeholder="Enter Product Description" ngModel></textarea>
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productImage" placeholder="Enter Product Image Url" ngModel>
+        </div>
+        <div>
+            <button (click)="addProductTrigger(addProduct)"  class="add_product_btn">Add Product</button>
+        </div>
+    </form>
+</div>
