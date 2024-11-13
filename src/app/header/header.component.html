@@ -1,14 +1,22 @@
 <nav class="nav">
-    <h1 class="header_text">E-Commerce</h1>
-    <div class="search_conatainer">
-        <input class="search_input" type="text" placeholder="Search for Products"/>
-        <button class="search_btn">Search</button>
+    <h1 routerLink="/" class="header_text">E-Commerce</h1>
+    <div  class="search_conatainer">
+        <input *ngIf="userType === 'default'" class="search_input" type="text" placeholder="Search for Products"/>
+        <button *ngIf="userType === 'default'" class="search_btn">Search</button>
     </div>
-    <ul class="nav_btns_cont">
-        <li class="nav_btns"><a class="nav_btns_text" routerLink="/">Home</a></li>
-        <li class="nav_btns"><a class="nav_btns_text" routerLink="/sellerauth">Seller</a></li>
-        <li class="nav_btns"><a class="nav_btns_text">Login</a></li>
-        <li class="nav_btns"><a class="nav_btns_text">Cart(0)</a></li>
-
-    </ul>
+    <div [ngSwitch]="userType">
+        <ul *ngSwitchCase="'default'" class="nav_btns_cont">
+            <li class="nav_btns"><a class="nav_btns_text" routerLink="/">Home</a></li>
+            <li class="nav_btns"><a class="nav_btns_text" routerLink="/sellerauth">Seller</a></li>
+            <li class="nav_btns"><a class="nav_btns_text">Login</a></li>
+            <li class="nav_btns"><a class="nav_btns_text">Cart(0)</a></li>
+        </ul>
+        <ul *ngSwitchCase="'seller'" class="nav_btns_cont">
+            <li routerLink="selleraddproduct" class="nav_btns"><a class="nav_btns_text">Add Product</a></li>
+            <li routerLink="sellerhome" class="nav_btns"><a  class="nav_btns_text">List</a></li>
+            <li (click)="sellerLogout()" class="nav_btns"><a class="nav_btns_text">Logout</a></li>
+            <li class="nav_btns"><a class="nav_btns_text">{{sellerEmail | titlecase}}</a></li>
+        </ul>
+    </div>
+    
 </nav>

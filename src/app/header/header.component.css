@@ -11,9 +11,11 @@
 }
 .nav_btns_text{
     text-decoration: none;
+    color: purple; 
 }
 .header_text{
     color: purple; 
+    cursor: pointer;
 }
 .search_input{
     padding: 7px;
@@ -23,6 +25,7 @@
 .nav_btns{
     list-style: none;
     margin-right: 10px;
+    cursor: pointer;
 }
 .nav{
     display: flex;

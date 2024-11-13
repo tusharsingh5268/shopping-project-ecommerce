@@ -21,12 +21,10 @@ export class SellerAuthComponent implements OnInit {
   sellerSubmit(signForm:any){
     this.seller.sellerSignUp(signForm.form.value).subscribe((res)=>{
       if(res){
-        console.log(signForm.form.value,'signForm.form.value')
-        signForm.reset();
-        console.log('JSONsignForm.form.value',JSON.stringify(signForm.form.value))
-        localStorage.setItem('seller',signForm.form.value)
+        localStorage.setItem('seller',JSON.stringify(signForm.form.value))
         this.seller.setSellerLogged(true)
         this.router.navigate(["/sellerhome"])
+        signForm.reset();
       }
     })
     console.log('selleremail',this.selleremail,this.password,signForm)
@@ -36,10 +34,9 @@ export class SellerAuthComponent implements OnInit {
     console.log(signForm.form.value,'signForm.form.value')
     this.seller.sellerLogin(signForm.form.value).subscribe((res:any)=>{
       if(res && res[0]){
-        console.log()
-        localStorage.setItem('seller',res[0])
+        localStorage.setItem('seller',JSON.stringify(res[0]));
+        this.seller.setSellerLogged(true)
         this.router.navigate(["/sellerhome"])
-        console.log('res',res)
         this.isLoginFail=false;
       }else{
         this.isLoginFail=true;

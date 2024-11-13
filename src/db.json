@@ -3,22 +3,17 @@
     {
       "id": "3a41",
       "email": "tushar@gmail.com",
-      "password": "12345"
+      "password": "tushar123"
     },
     {
       "id": "828f",
       "selleremail": "chetan@gmail.com",
-      "password": "12345"
+      "password": "chetan123"
     },
     {
       "id": "2e5c",
       "selleremail": "sam@gmail.com",
-      "password": "12344"
-    },
-    {
-      "id": "cb5d",
-      "selleremail": "sam@gmail.com",
-      "password": "12344"
+      "password": "sam123"
     }
   ]
 }
