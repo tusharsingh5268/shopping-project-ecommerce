@@ -15,4 +15,13 @@ export class ProductService {
     const url=this.environment.baseUrl + this.serviceEndpoints.addProduct;
     return this.http.post(url,params)
   }
+  getProductList(){
+    const url=this.environment.baseUrl + this.serviceEndpoints.addProduct;
+    return this.http.get<sellerProduct[]>(url)
+  }
+  deleteProductItem(id:string){
+    const url=this.environment.baseUrl + this.serviceEndpoints.addProduct + `/${id}`;
+    console.log('url delete',url)
+    return this.http.delete(url)
+  }
 }

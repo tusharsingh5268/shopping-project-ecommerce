@@ -1,1 +1,28 @@
-<p>seller-home works!</p>
+<div class="seller_product_list_container">
+    <h1 class="">All Product List</h1>
+    <p *ngIf="showItemAddMsg">{{addMessage}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of productList; trackBy:checkProductList">
+                <td><img class="product_img" src="{{item.productImage}}"></td>
+                <td>{{item.productName}}</td>
+                <td>{{item.productPrice}}</td>
+                <td>{{item.productColor}}</td>
+                <td>{{item.productCategory}}</td>
+                <td>{{item.productDescription}}</td>
+                <td><button class="item_btn" (click)="productDelete(item.id)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

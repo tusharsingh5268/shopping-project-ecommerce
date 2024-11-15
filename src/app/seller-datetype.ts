@@ -10,5 +10,6 @@ export interface sellerProduct{
     productCategory:string,
     productColor:string,
     productDescription:string,
-    productImage:string
+    productImage:string,
+    id:string
 }
