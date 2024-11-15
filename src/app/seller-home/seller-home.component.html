@@ -21,7 +21,9 @@
                 <td>{{item.productColor}}</td>
                 <td>{{item.productCategory}}</td>
                 <td>{{item.productDescription}}</td>
-                <td><button class="item_btn" (click)="productDelete(item.id)">Delete</button></td>
+                <td><fa-icon class="item_action_btn" (click)="productDelete(item.id)" [icon]="deleteIcon"></fa-icon>
+                    <fa-icon class="item_action_btn" (click)="productUpdate(item.id)" [icon]="editIcon"></fa-icon>
+                </td>
             </tr>
         </tbody>
     </table>

@@ -12,10 +12,8 @@ table td,table th{
     width: 100px;
     height: 70px;
 }
-.item_btn{
-    padding: 7px;
-    color: white;
-    background: purple;
-    border: 1px solid purple;
+.item_action_btn{
     cursor: pointer;
+    color: purple;
+    margin-right: 10px;
 }

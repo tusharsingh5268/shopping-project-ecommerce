@@ -1,6 +1,10 @@
 import { Component,OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { sellerProduct } from '../seller-datetype';
+import { faTrash,faEdit} from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
@@ -10,7 +14,9 @@ export class SellerHomeComponent implements OnInit {
   productList:sellerProduct[]=[];
   showItemAddMsg:boolean=false;
   addMessage:string=""
-  constructor(private productService:ProductService){
+  deleteIcon=faTrash;
+  editIcon=faEdit;
+  constructor(private productService:ProductService,private router:Router){
 
   }
   ngOnInit(): void {
@@ -28,6 +34,10 @@ export class SellerHomeComponent implements OnInit {
     console.log('checkProductList',item)
     return item.id
   };
+  productUpdate(id:string){
+    this.router.navigate(['/sellerUpdateProduct', id]);
+   
+  }
   productDelete(id:string){
     this.productService.deleteProductItem(id).subscribe((res)=>{
       if(res){
@@ -38,7 +48,6 @@ export class SellerHomeComponent implements OnInit {
           this.showItemAddMsg=false;
           this.addMessage=""
         },3000)
-        console.log('res',res)
       }
     })
   }

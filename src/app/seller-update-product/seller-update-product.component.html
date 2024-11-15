@@ -1,0 +1,27 @@
+<div class="seller_add_product_conatiner">
+    <h1 class="add_product_header">Update Product</h1>
+    <p *ngIf="showUpdateMessage" class="updateMsg">{{prouctUpdateMessage}}</p>
+    <form #addProduct="ngForm">
+        <div class="product_field">
+            <input type="text" class="input_field" name="productName" placeholder="Enter Product Name" ngModel="{{productItem?.productName}}">
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productPrice" placeholder="Enter Product Price" ngModel="{{productItem?.productPrice}}">
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productColor" placeholder="Enter Product Color" ngModel="{{productItem?.productColor}}">
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productCategory" placeholder="Enter Product Category" ngModel="{{productItem?.productCategory}}">
+        </div>
+        <div class="product_field">
+            <textarea class="input_field" name="productDescription" placeholder="Enter Product Description" ngModel="{{productItem?.productDescription}}"></textarea>
+        </div>
+        <div class="product_field">
+            <input type="text" class="input_field" name="productImage" placeholder="Enter Product Image Url" ngModel="{{productItem?.productImage}}">
+        </div>
+        <div>
+            <button (click)="UpdateProductTrigger(addProduct.value)"  class="add_product_btn">Update Product</button>
+        </div>
+    </form>
+</div>

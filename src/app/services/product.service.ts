@@ -24,4 +24,12 @@ export class ProductService {
     console.log('url delete',url)
     return this.http.delete(url)
   }
+  getProduct(id:string){
+    const url=this.environment.baseUrl + this.serviceEndpoints.addProduct + `/${id}`;
+    return this.http.get<sellerProduct>(url)
+  }
+  updateProduct(id:string,product:sellerProduct){
+    const url=this.environment.baseUrl + this.serviceEndpoints.addProduct + `/${id}`;
+    return this.http.put<sellerProduct>(url,product)
+  }
 }

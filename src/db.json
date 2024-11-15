@@ -24,17 +24,31 @@
       "id": "4f7d",
       "selleremail": "sam@gmail.com",
       "password": "sam123"
+    },
+    {
+      "id": "3fcf",
+      "selleremail": "sam@gmail.com",
+      "password": "sam123"
     }
   ],
   "products": [
     {
-      "id": "053b",
       "productName": "I phone",
       "productPrice": "100000",
-      "productColor": "",
-      "productCategory": "",
-      "productDescription": "Good",
-      "productImage": "https://m.media-amazon.com/images/I/51VfGGh7quL.jpg"
+      "productColor": "Black",
+      "productCategory": "Mobile",
+      "productDescription": "Good Data 1",
+      "productImage": "https://m.media-amazon.com/images/I/51VfGGh7quL.jpg",
+      "id": "ccb7"
+    },
+    {
+      "productName": "I phone 2",
+      "productPrice": "100000",
+      "productColor": "Black",
+      "productCategory": "Mobile",
+      "productDescription": "Bad Product Very",
+      "productImage": "https://m.media-amazon.com/images/I/51VfGGh7quL.jpg",
+      "id": "565b"
     }
   ]
 }
