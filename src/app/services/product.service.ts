@@ -32,4 +32,8 @@ export class ProductService {
     const url=this.environment.baseUrl + this.serviceEndpoints.addProduct + `/${id}`;
     return this.http.put<sellerProduct>(url,product)
   }
+  limitedProductList(){
+    const url=this.environment.baseUrl + this.serviceEndpoints.addProduct + `?_limit=3`;
+    return this.http.get<sellerProduct[]>(url)
+  }
 }
